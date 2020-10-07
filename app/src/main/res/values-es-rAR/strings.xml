@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AstroPhoto</string>
+    <string name="title_painel">Panel de control</string>
+    <string name="title_notificacoes">Notificaciones</string>
+    <string name="textview">TextView</string>
+    <string name="selecione_a_data">Seleccione fecha</string>
+    <string name="title_dashboard">Panel de control</string>
+    <string name="title_home">Comienzo</string>
+    <string name="title_notifications">Seleccione fecha</string>
+    <string name="title_inicio">Comienzo</string>
+    <string name="photo">Fotografía</string>
+    <string name="name">Nombre:</string>
+    <string name="camera">Cámara:</string>
+    <string name="lens">Lente:</string>
+    <string name="schedule">Calendario:</string>
+    <string name="exposure">Exposición:</string>
+    <string name="diaphragm_opening">Apertura del diafragma:</string>
+    <string name="focal_distance">Distancia focal:</string>
+    <string name="dpi_resolution">Resolución DPI:</string>
+    <string name="flash_mode">Modo destello:</string>
+    <string name="white_balance">Balance de blancos:</string>
+    <string name="rotation">Rotación:</string>
+    <string name="tags">Etiquetas:</string>
+    <string name="width">Anchura:</string>
+    <string name="height">Altura:</string>
+    <string name="size">Talla:</string>
+    <string name="path">Salvado:</string>
+    <string name="geolocation">Ubicación:</string>
+    <string name="iso_sensitivity">ISO</string>
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="attachment_summary_off">Descargar archivos adjuntos solo cuando se soliciten manualmente</string>
+    <string name="attachment_summary_on">Descargar automáticamente archivos adjuntos para correos electrónicos entrantes</string>
+    <string name="attachment_title">Descargar archivos adjuntos entrantes</string>
+    <string name="sync_title">Sincronizar el correo electrónico periódicamente</string>
+    <string name="reply_title">Acción de respuesta predeterminada</string>
+    <string name="signature_title">Tu firma</string>
+    <string name="sync_header">Sincronizar</string>
+    <string name="messages_header">Mensajes</string>
+    <string name="title_activity_cliente_config">ClienteConfig</string>
+    <string name="action_files">Archivos</string>
+    <string name="action_camera">Cámara</string>
+    <string name="action_settings">Configuración</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AstroPhoto</string>
+    <string name="action_settings">Configuração</string>
+    <string name="action_camera">Camera</string>
+    <string name="action_files">Arquivos</string>
+    <string name="title_activity_cliente_config">ClienteConfig</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Mensagens</string>
+    <string name="sync_header">Sincronizar</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Sua Assinatura</string>
+    <string name="reply_title">Configuração Padrão</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sincronise seu email periódicamente</string>
+    <string name="attachment_title">Baixar anexos de entrada automaticamente</string>
+    <string name="attachment_summary_on">Automaticamente baixar anexos de emails de entrada
+    </string>
+    <string name="attachment_summary_off">Somente baixar emails manualmente</string>
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_home">Início</string>
+    <string name="title_dashboard">Painel de controle</string>
+    <string name="title_notifications">Notificações</string>
+    <!-- Translation to Portuguese -->
+    <string name="title_inicio">Início</string>
+    <string name="title_painel">Painel de controle</string>
+    <string name="title_notificacoes">Notificações</string>
+    <string name="textview">TextView</string>
+    <string name="selecione_a_data">Selecione a Data</string>
+    <string name="photo">Foto</string>
+
+    <string name="name">Nome: </string>
+    <string name="camera">Camera: </string>
+    <string name="lens">Lente: </string>
+    <string name="schedule">Horário: </string>
+    <string name="exposure">Exposição: </string>
+    <string name="iso_sensitivity">ISO</string>
+    <string name="diaphragm_opening">Abertura Diafragma: </string>
+    <string name="focal_distance">Distância focal: </string>
+    <string name="dpi_resolution">"Resolução DPI: "</string>
+    <string name="flash_mode">Modo Flash: </string>
+    <string name="white_balance">Balanço Branco: </string>
+    <string name="rotation">Rotação: </string>
+    <string name="tags">"Tags: "</string>
+    <string name="width">Largura: </string>
+    <string name="height">Altura: </string>
+    <string name="size">Tamanho: </string>
+    <string name="path">Salvo: </string>
+    <string name="geolocation">Localização: </string>
+</resources>

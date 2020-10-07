@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">AstroPhoto</string>
+    <string name="action_settings">Configuration</string>
+    <string name="action_camera">Camera</string>
+    <string name="action_files">Files</string>
+    <string name="title_activity_cliente_config">ClienteConfig</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- Translation to Portuguese -->
+    <string name="title_inicio">Home</string>
+    <string name="title_painel">Dashboard</string>
+    <string name="title_notificacoes">Notifications</string>
+    <string name="textview">TextView</string>
+    <string name="selecione_a_data">Select date</string>
+    <string name="photo">Photo</string>
+
+    <string name="name">Name: </string>
+    <string name="camera">Camera: </string>
+    <string name="lens">Lens: </string>
+    <string name="schedule">Schedule: </string>
+    <string name="exposure">Exposure: </string>
+    <string name="iso_sensitivity">ISO</string>
+    <string name="diaphragm_opening">Diaphragm opening: </string>
+    <string name="focal_distance">Focal Distance: </string>
+    <string name="dpi_resolution">DPI resolution: </string>
+    <string name="flash_mode">Flash Mode: </string>
+    <string name="white_balance">White balance: </string>
+    <string name="rotation">Rotation: </string>
+    <string name="tags">Tags: </string>
+    <string name="width">Width: </string>
+    <string name="height">Height: </string>
+    <string name="size">Tamanho: </string>
+    <string name="path">Path: </string>
+    <string name="geolocation">Location: </string>
+    <string name="capture">capture</string>
+    <string name="preview_area">preview_area</string>
+    <string name="image">Image</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+</resources>
