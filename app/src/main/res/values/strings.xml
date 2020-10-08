@@ -53,5 +53,7 @@
     <string name="preview_area">preview_area</string>
     <string name="image">Image</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="dashboard">DashBoard</string>
+    <string name="notification">Notification</string>
 
 </resources>

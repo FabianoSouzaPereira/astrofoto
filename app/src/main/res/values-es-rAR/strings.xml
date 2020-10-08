@@ -41,4 +41,5 @@
     <string name="action_files">Archivos</string>
     <string name="action_camera">Cámara</string>
     <string name="action_settings">Configuración</string>
+    <string name="dashboard">DashBoard</string>
 </resources>

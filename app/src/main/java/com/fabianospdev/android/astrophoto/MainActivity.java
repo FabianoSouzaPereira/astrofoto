@@ -61,10 +61,6 @@ public class MainActivity extends AppCompatActivity{
         init();
         listPhotos();
 
-
-
-
-
     }
 
     /** Load devices list from DB */
@@ -114,7 +110,7 @@ public class MainActivity extends AppCompatActivity{
             }
 
         } );
-        relativeLayout = findViewById( R.id.relativeLayout );
+        relativeLayout = findViewById( R.id.relativeLayOut );
         recyclerView = findViewById( R.id.recyclerView );
         recyclerView.setHasFixedSize(true);
     }
