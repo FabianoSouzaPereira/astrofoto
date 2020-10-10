@@ -47,7 +47,7 @@ public class RecyclerAdapter  extends RecyclerView.Adapter<RecyclerAdapter.Viewh
     holder.camera.setText(photo.getCamera());
     holder.lens.setText(photo.getLens());
     holder.schedule.setText(photo.getSchedule());
-    holder.expose.setText(photo.getExpose());
+    holder.expose.setText(photo.getExposure());
     holder.iso_sensitivity.setText(photo.getIso_sensitivity());
     holder.diaphragm_opening.setText(photo.getDiaphragm_opening());
     holder.focal_distance.setText(photo.getFocal_distance());

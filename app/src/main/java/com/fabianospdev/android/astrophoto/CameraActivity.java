@@ -101,9 +101,14 @@ public class CameraActivity extends AppCompatActivity implements CameraXConfig.P
   private final Integer CODE = null;
   private final String NAME = null;
   private final String CAMERA = null;
+  private final String MODEL = null;
+  private final String SOFTWARE = null;
+  private final String TYPE = null;
+  private final String DIMENIONS = null;
   private final String LENS = null;
   private final String SCHEDULE = null;
-  private final String EXPOSE = null;
+  private final String EXPOSURE = null;
+  private final String EXPOSUREBIAS = null;
   private final String ISO_SENSITIVITY = null;
   private final String DIAPHRAGM_OPENING = null;
   private final String FOCAL_DISTANCE = null;
@@ -161,7 +166,7 @@ public class CameraActivity extends AppCompatActivity implements CameraXConfig.P
   }
 
 
-  private void takePicture() {
+  protected void takePicture() {
     if (cameraDevice == null)
       return;
     CameraManager manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
@@ -197,9 +202,9 @@ public class CameraActivity extends AppCompatActivity implements CameraXConfig.P
           //TODO  fazer metodo para salvar no banco. Manter também metodo para salvar em arquivo
           Database db = new Database( this );
           if(db != null){
-            db.addPhoto( new Photo( CODE, NAME, CAMERA, LENS, SCHEDULE, EXPOSE, ISO_SENSITIVITY, DIAPHRAGM_OPENING,
-                FOCAL_DISTANCE, DPI_RESOLUTION, FLASH_MODE, WHITE_BALANCE, ROTATION, TAGS, WIDTH, HEIGHT,
-                SIZE, PATH, GEOLOCATION, IMAGE ) );
+            db.addPhoto( new Photo( NAME, CAMERA, MODEL, SOFTWARE, TYPE, DIMENIONS, LENS,SCHEDULE,
+                EXPOSURE, EXPOSUREBIAS,ISO_SENSITIVITY, DIAPHRAGM_OPENING, FOCAL_DISTANCE, DPI_RESOLUTION,
+                FLASH_MODE, WHITE_BALANCE, ROTATION, TAGS, WIDTH, HEIGHT, SIZE, PATH, GEOLOCATION, IMAGE ) );
           }
         }
 

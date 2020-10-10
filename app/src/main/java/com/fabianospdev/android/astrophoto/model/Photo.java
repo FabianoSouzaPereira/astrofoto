@@ -1,37 +1,39 @@
 package com.fabianospdev.android.astrophoto.model;
 
 import java.util.Date;
+import java.util.EmptyStackException;
+import java.util.Objects;
 
 public class Photo {
   private int code;
-  private String name = "foto1";
-  private String camera = "samsung";
-  private String model = "SM-G355M";
-  private String software = "G355MUBU0APH1";
-  private String type = "jpg";
-  private String dimenions = "3264x2448";
-  private String lens = "3.3mm";
-  private String schedule = "1900-01-01 00:00:00";
-  private String expose = "1/125s";
-  private String exposurebias = "0 ev";
-  private String iso_sensitivity = "100";
+  private String name = "";
+  private String camera = "";
+  private String model = "";
+  private String software = "";
+  private String type = "";
+  private String dimenions = "";
+  private String lens = "";
+  private String schedule = "";
+  private String exposure = "";
+  private String exposurebias = "";
+  private String iso_sensitivity = "";
   private String diaphragm_opening = "";
-  private String focal_distance = "50mm";
-  private String dpi_resolution = "96dpi";
-  private String flash_mode = "No flash";
-  private String white_balance  = "Auto";
-  private String rotation = "portraid";
+  private String focal_distance = "";
+  private String dpi_resolution = "";
+  private String flash_mode = "";
+  private String white_balance = "";
+  private String rotation = "";
   private String tags = "";
-  private String width = "2560px";
-  private String height = "1536px";
-  private String size = "500kb";
+  private String width = "";
+  private String height = "";
+  private String size = "";
   private String path = "";
-  private String geolocation = "0-0";
-  private byte[] image; //usa-se byte[] pq blob no android não existe
+  private String geolocation = "";
+  private byte[] image;
 
   public Photo(){}
 
-  public Photo( String name, String camera, String model, String software, String type, String dimenions, String lens, String schedule, String expose, String exposurebias, String iso_sensitivity, String diaphragm_opening, String focal_distance, String dpi_resolution, String flash_mode, String white_balance, String rotation, String tags, String width, String height, String size, String path, String geolocation, byte[] image ) {
+  public Photo( String name, String camera, String model, String software, String type, String dimenions, String lens, String schedule, String exposure, String exposurebias, String iso_sensitivity, String diaphragm_opening, String focal_distance, String dpi_resolution, String flash_mode, String white_balance, String rotation, String tags, String width, String height, String size, String path, String geolocation, byte[] image ) {
     this.name = name;
     this.camera = camera;
     this.model = model;
@@ -40,7 +42,7 @@ public class Photo {
     this.dimenions = dimenions;
     this.lens = lens;
     this.schedule = schedule;
-    this.expose = expose;
+    this.exposure = exposure;
     this.exposurebias = exposurebias;
     this.iso_sensitivity = iso_sensitivity;
     this.diaphragm_opening = diaphragm_opening;
@@ -56,9 +58,10 @@ public class Photo {
     this.path = path;
     this.geolocation = geolocation;
     this.image = image;
+    validateConstructor(0);
   }
 
-  public Photo( int code, String name, String camera, String model, String software, String type, String dimenions, String lens, String schedule, String expose, String exposurebias, String iso_sensitivity, String diaphragm_opening, String focal_distance, String dpi_resolution, String flash_mode, String white_balance, String rotation, String tags, String width, String height, String size, String path, String geolocation, byte[] image ) {
+  public Photo( int code, String name, String camera, String model, String software, String type, String dimenions, String lens, String schedule, String exposure, String exposurebias, String iso_sensitivity, String diaphragm_opening, String focal_distance, String dpi_resolution, String flash_mode, String white_balance, String rotation, String tags, String width, String height, String size, String path, String geolocation, byte[] image ) {
     this.code = code;
     this.name = name;
     this.camera = camera;
@@ -68,7 +71,7 @@ public class Photo {
     this.dimenions = dimenions;
     this.lens = lens;
     this.schedule = schedule;
-    this.expose = expose;
+    this.exposure = exposure;
     this.exposurebias = exposurebias;
     this.iso_sensitivity = iso_sensitivity;
     this.diaphragm_opening = diaphragm_opening;
@@ -84,6 +87,27 @@ public class Photo {
     this.path = path;
     this.geolocation = geolocation;
     this.image = image;
+    validateConstructor(1);
+  }
+
+  /** Validate if importantes parametres are null or empty */
+  private void  validateConstructor(int var){
+
+      if ( name == null || name.equals( "" ) ) {
+        throw new IllegalArgumentException( "Name Can not be empty" );
+      }
+      if ( schedule == null || schedule.equals( "" ) ) {
+        throw new IllegalArgumentException( "Schedule Can not be empty" );
+      }
+      if ( image == null ) {
+        throw new IllegalArgumentException( "Image Can not be empty" );
+      }
+    if(var == 1){
+      if(code <= 0) {
+        throw new IllegalArgumentException( "Code Can not be less 1" );
+      }
+    }
+
   }
 
   public int getCode() {
@@ -91,6 +115,9 @@ public class Photo {
   }
 
   public void setCode( int code ) {
+    if(code <= 0){
+      throw new IllegalArgumentException("Code Can not be less than 1");
+    }
     this.code = code;
   }
 
@@ -99,6 +126,9 @@ public class Photo {
   }
 
   public void setName( String name ) {
+    if(name.isEmpty()){
+      name = "";
+    }
     this.name = name;
   }
 
@@ -155,15 +185,18 @@ public class Photo {
   }
 
   public void setSchedule( String schedule ) {
-    this.schedule = schedule;
+    //todo teste de data
+    if ( !Objects.equals( schedule, "" ) ){
+      this.schedule = schedule;
+    }
   }
 
-  public String getExpose() {
-    return expose;
+  public String getExposure() {
+    return exposure;
   }
 
-  public void setExpose( String expose ) {
-    this.expose = expose;
+  public void setExposure( String exposure ) {
+    this.exposure = exposure;
   }
 
   public String getExposurebias() {
@@ -283,6 +316,8 @@ public class Photo {
   }
 
   public void setImage( byte[] image ) {
-    this.image = image;
+    if ( !Objects.equals(image, null )) {
+      this.image = image;
+    }
   }
 }

@@ -107,8 +107,8 @@ public class Database extends SQLiteOpenHelper {
     values.put(DIMENIONS,photo.getCamera());
     values.put(LENS_COLUMN,photo.getLens());
     values.put(SCHEDULE_COLUMN,photo.getSchedule());
-    values.put(EXPOSE_COLUMN,photo.getExpose());
-    values.put(EXPOSUREBIAS_COLUMN,photo.getExpose());
+    values.put(EXPOSE_COLUMN,photo.getExposure());
+    values.put(EXPOSUREBIAS_COLUMN,photo.getExposure());
     values.put(ISO_SENSITIVITY_COLUMN,photo.getIso_sensitivity());
     values.put(DIAPHRAGM_OPENING_COLUMN,photo.getDiaphragm_opening());
     values.put(FOCAL_DISTANCE_COLUMN,photo.getFocal_distance());
@@ -188,7 +188,7 @@ public class Database extends SQLiteOpenHelper {
         photo.setDimenions(c.getString( 6 ));
         photo.setLens( c.getString( 7 ) );
         photo.setSchedule( c.getString( 8 ) );
-        photo.setExpose( c.getString( 9 ) );
+        photo.setExposure( c.getString( 9 ) );
         photo.setExposurebias( c.getString( 10 ) );
         photo.setIso_sensitivity( c.getString( 11 ) );
         photo.setDiaphragm_opening( c.getString( 12 ) );
@@ -228,8 +228,8 @@ public class Database extends SQLiteOpenHelper {
     values.put(DIMENIONS,photo.getCamera());
     values.put(LENS_COLUMN,photo.getLens());
     values.put(SCHEDULE_COLUMN,photo.getSchedule());
-    values.put(EXPOSE_COLUMN,photo.getExpose());
-    values.put(EXPOSUREBIAS_COLUMN,photo.getExpose());
+    values.put(EXPOSE_COLUMN,photo.getExposure());
+    values.put(EXPOSUREBIAS_COLUMN,photo.getExposure());
     values.put(ISO_SENSITIVITY_COLUMN,photo.getIso_sensitivity());
     values.put(DIAPHRAGM_OPENING_COLUMN,photo.getDiaphragm_opening());
     values.put(FOCAL_DISTANCE_COLUMN,photo.getFocal_distance());
