@@ -40,12 +40,12 @@ public class Database extends SQLiteOpenHelper {
   private static final String SIZE_COLUMN = "size";
   private static final String PATH_COLUMN = "path";
   private static final String GEOLOCATION_COLUMN = "geolocation";
-  private static final String  IMAGE_COLUMN = null;
+  private static final String  IMAGE_COLUMN = "image";
 
   private static final String SQL_CREATE_PHOTO_TABLE =
       "CREATE TABLE " + PHOTO_TABLE + " (" +
-          CODE_COLUMN + " INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-          NAME_COLUMN + " TEXT NOT NULL," +
+          CODE_COLUMN + " INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
+          NAME_COLUMN + " TEXT NOT NULL UNIQUE," +
           CAMERA_COLUMN + " TEXT NOT NULL," +
           MODEL_COLUMN + " TEXT NOT NULL," +
           SOFTWARE_COLUMN + " TEXT NOT NULL," +
@@ -68,7 +68,7 @@ public class Database extends SQLiteOpenHelper {
           SIZE_COLUMN + " TEXT NOT NULL," +
           PATH_COLUMN + " TEXT NOT NULL," +
           GEOLOCATION_COLUMN + " TEXT NOT NULL," +
-          IMAGE_COLUMN + " Blob " + ")";
+          IMAGE_COLUMN + " BLOB)";
 
   private static final String[] Photocol = {CODE_COLUMN, NAME_COLUMN, CAMERA_COLUMN, MODEL_COLUMN, SOFTWARE_COLUMN,
       TYPE_COLUMN, DIMENIONS, LENS_COLUMN, SCHEDULE_COLUMN,  EXPOSE_COLUMN,  EXPOSUREBIAS_COLUMN, ISO_SENSITIVITY_COLUMN,
@@ -78,7 +78,7 @@ public class Database extends SQLiteOpenHelper {
 
   private static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + PHOTO_TABLE;
 
-  private static final String SQL_UPDATE_ENTRIES = "UPDATE "  + PHOTO_TABLE;
+  private static final String SQL_UPDATE_ENTRIES = "UPDATE IF EXISTS "  + PHOTO_TABLE;
 
 
   public Database( @Nullable Context context ) {
